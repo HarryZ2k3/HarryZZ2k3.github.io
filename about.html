@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Harry's Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="friends.html">Friends</a></li>
+                <li><a href="pictures.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="funfacts.html">Fun Facts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Hi, I'm Dai, you can call me Harry 👋</h2>
+                <p>I'm a **software engineer intern** and **3rd-year IT student** at **VNU-HCMIU x UWE Bristol** (2021 - 2026). I have a passion for **AI, full-stack development, and database management**. </p>
+
+                <p>I've worked on multiple projects, from **developing a student record management system** to **building an AI-powered early warning system for heart disease**. My experience includes working with **Java, Python, C, SQL, and AI deep learning**.</p>
+
+                <p>Besides coding, I also enjoy **graphic design, typography, and game development**. I’ve worked on multiple projects, including a **Connect5 game (LineGrinder)** and a **chess engine using advanced algorithms like AlphaBetaWithMoveOrdering**.</p>
+
+                <p>When I'm not coding, you’ll probably find me **learning about foreign keys and database optimization, attending improv classes**, or hanging out with **Jojo, my fluffy poodle** 🐶.</p>
+
+                <button onclick="location.href='projects.html'">Check Out My Projects</button>
+            </div>
+            
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Harry's Profile Picture">
+            </div>
+        </div>
+    </section>
+ 
+    <section id="skills">
+        <h2>💡 My Skills & Interests</h2>
+        <div class="skills-grid">
+            <div class="skill-card">💻 Java & Python</div>
+            <div class="skill-card">📊 SQL & Database Design</div>
+            <div class="skill-card">🤖 AI & Deep Learning</div>
+            <div class="skill-card">🎮 Game Development</div>
+            <div class="skill-card">🎨 Typography & Graphic Design</div>
+            <div class="skill-card">📝 Technical Writing</div>
+        </div>
+    </section>
+
+    <section id="random-fact">
+        <h2>🎲 A Random Fact About Me</h2>
+        <p id="randomFact">Click the button to learn something random about me!</p>
+        <button onclick="generateRandomFact()">Get a Fun Fact</button>
+    </section>
+
+    <footer>
+        <p>&copy;My Personal Website | Designed by Huynh Phuong Dai ITIWE21039</p>
+    </footer>
+
+    <script>
+        const facts = [
+            "I taught myself C# and Arduino programming!",
+            "I won 2nd place in the Secondary Student Science & Engineering Fair for an AI-driven health monitoring system.",
+            "I enjoy playing around with typography and poster design.",
+            "I have experience in AI deep learning for real-time health prediction models.",
+            "I am a massive military tech enthusiast and super into playing War thunder",
+            "I used to be a professional CS:GO gamer.",
+            "I am a boyscout .",
+            "I'm really into learning about database foreign keys and primary keys!"
+        ];
+
+        function generateRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById("randomFact").textContent = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
